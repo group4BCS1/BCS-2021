@@ -1,3 +1,5 @@
+# Determining the Decision towards employment considering the Location and Payment, while using try and except
+
 try:
     location = input('Enter the "LOCATION": ')
     pay = int(input("Enter PAY: "))

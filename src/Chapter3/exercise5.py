@@ -1,4 +1,5 @@
-# How Much The Wedding Costs
+# Determining How Much The Wedding Costs using the try and except
+
 try:
     guests = int(input("Enter guests attending your wedding:\n "))
     if guests <= 50 :

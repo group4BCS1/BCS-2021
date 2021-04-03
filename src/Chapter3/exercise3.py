@@ -1,3 +1,4 @@
+# Determining the Grade using the user's input
 
 print('\nPLEASE enter a score between 0.0 and 1.0')
 try:

@@ -1,3 +1,5 @@
+# Determining the pay using try and except
+
 try:
     hours = int(input("Enter Hours: \n "))
     rate = int(input("Enter Rate: \n "))
