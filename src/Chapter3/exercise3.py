@@ -1,17 +1,17 @@
-# Determining the Grade using the user's input
+# Determining the Grade using the user's
 
-print('\nPLEASE enter a score between 0.0 and 1.0')
-try:
-    score = float(input("\nEnter Score: \n "))
-    if score >= 0.9 :
+score = float(input('Enter score between 0.0 and 1.0: '))
+
+if score > 0.0 and score < 1.0:
+    if score >= 0.9:
         print('A')
-    elif score >= 0.8 :
+    elif score >= 0.8:
         print('B')
-    elif score >= 0.7 :
+    elif score >= 0.7:
         print('C')
-    elif score >= 0.6 :
+    elif score >= 0.6:
         print('D')
-    elif score < 0.6 :
+    else:
         print('F')
-except:
-    print("Bad Score")
+else:
+    print('Bad score')
