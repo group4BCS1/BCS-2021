@@ -1,11 +1,11 @@
 print('Welcome to the vending machine change maker program!')
 print('Change maker initialized')
 print('Stock Contains: ')
-n = 25 # nickels
-d = 25 # dimes
-q = 25 # quarters
-o = 0 # one dollar  bill
-f = 0 # five dollar bill
+n = int(25) # nickels
+d = int(25) # dimes
+q = int(25) # quarters
+o = int(0) # one dollar  bill
+f = int(0) # five dollar bill
 print(n, 'nickels')
 print(d, 'dimes')
 print(q, 'quarters')
@@ -15,4 +15,7 @@ while True:
     user_input = input('Enter the purchase price:\n ')
     if user_input == 'q':
         break
+    user_input = float(user_input)
+    if user_input < 0.05:
+        print('Invalid Input')
     print(user_input)                
