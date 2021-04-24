@@ -33,7 +33,8 @@ while True:
                     remaining_q = int(deposit // 0.25)
                     deposit = deposit % 0.25
                     remaining_d = int(deposit // 0.1)
-                    deposit = 
+                    deposit = deposit % 0.1 
+                    remaining_n = int(deposit // 0.05)
                     
                     break
         else:
