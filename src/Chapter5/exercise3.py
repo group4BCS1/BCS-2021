@@ -43,7 +43,7 @@ while True:
                         print(f"{remaining_q} quarters\n{remaining_d} dimes")
                         q = q - remaining_q
                         d =  - remaining_d
-                    elif (remianing_q != 0) and (remaining_d == 0) an (remaining_n != 0):
+                    elif (remianing_q != 0) and (remaining_d == 0) and (remaining_n != 0):
                         print(f"{remaining_q} quarters\n{remaining_n} nickels")
                         q = q - remaining_q
                         n = n - remaining_n
