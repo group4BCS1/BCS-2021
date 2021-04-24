@@ -1,3 +1,15 @@
+def change():
+    a = user_input // 1
+    b = user_input % 1
+    if deposit < user_input and a != 0:
+        payment_due = print(f"Payment Due: {a: .0f} dollars and {b * 100: .0f} cents")
+    elif deposit > user_input and a == 0 and b != 0:
+        payment_due = print(f"Payment due:{b*100:.0f} cents")
+
+
+
+
+
 print('\n\nWelcome to the vending machine change maker program')
 print('\nChange maker initialized.')
 print('\nStock contains: ')
@@ -18,12 +30,7 @@ while True:
             print('\nDeposit Menu\n: ')
             print("'n' - Deposit a nickel\n'd' - Deposit a dime\n'q' - Deposit a quarter\n'o' - Deposit a one dollar bill\n'f' - Deposit a five dollar bill\n'c' - Cancel the purchase\n")
             deposit = 0
-            a = user_input // 1
-            b = user_input % 1
-            if deposit < user_input and a != 0:
-                 payment_due = print(f"Payment due:{a:.0f} dollars and {b*100:.0f} cents")
-            elif deposit > user_input and a == 0 and b != 0:
-                payment_due = print(f"Payment due:{b*100:.0f} cents")
+            change()    
             while deposit < user_input:
                 user_input2 = input('\nEnter your Deposit:\n')
                 if user_input2 == 'c':
@@ -65,7 +72,26 @@ while True:
                     
                     
                     break
-                
+                elif user_input2 == 'q':
+                    due_change = deposit - 0.25
+                    deposit += 0.25
+                    q += 1 
+                    change()
+                    continue
+                elif user_input2 == 'd':
+                    due_change = deposit - 0.1 
+                    deposit += 0.1 
+                    d += 0.1 
+                    change()
+                    continue
+                elif user_input2 == 'n':
+                    due_change = deposit - 0.05
+                    deposit += 0.05 
+                    n += 0.05 
+                    change()
+                    continue
+                elif 
+                    
         else:
             print('Invalid input')
     except:
