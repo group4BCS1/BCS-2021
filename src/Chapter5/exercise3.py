@@ -15,7 +15,14 @@ while True:
         user_input = float(user_input)
         user_input = ((user_input * 100)%5==0)
         if user_input > 0 and ((user_input * 100)%5==0):
-            pass
+            print('\nDeposit Menu\n: ')
+            print("'n' - Deposit a nickel\n'd' - Deposit a dime\n'q' - Deposit a quarter\n'o' - Deposit a one dollar bill\n'f' - Deposit a five dollar bill\n'c' - Cancel the purchase\n")
+            a = user_input // 1
+            b = user_input % 1
+            if a == 0:
+                payment_due=print(f"Payment due:{b*100:.0f} cents")
+            else:
+                payment_due=print(f"Payment due:{a:.0f} dollars and {b*100:.0f} cents")
         else:
             print('Invalid input')
         print(user_input)
