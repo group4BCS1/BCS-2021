@@ -81,16 +81,33 @@ while True:
                 elif user_input2 == 'd':
                     due_change = deposit - 0.1 
                     deposit += 0.1 
-                    d += 0.1 
+                    d += 1 
                     change()
                     continue
                 elif user_input2 == 'n':
                     due_change = deposit - 0.05
                     deposit += 0.05 
-                    n += 0.05 
+                    n += 1
                     change()
                     continue
-                elif 
+                elif user_input2 == 'o':
+                    due_change = deposit - 1
+                    deposit += 1
+                    o += 1
+                    change()
+                    continue
+                elif user_input2 == 'f':
+                    due_change = deposit - 5
+                    deposit += 5
+                    f += 1
+                    change()
+                    continue
+                else:
+                    print('Invalid Input', dep)
+                    change()
+                    continue
+                
+                    
                     
         else:
             print('Invalid input')
