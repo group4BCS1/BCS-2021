@@ -1,21 +1,17 @@
-print('Welcome to the vending machine change maker program!')
-print('Change maker initialized')
-print('Stock Contains: ')
-n = int(25) # nickels
-d = int(25) # dimes
-q = int(25) # quarters
-o = int(0) # one dollar  bill
-f = int(0) # five dollar bill
-print(n, 'nickels')
-print(d, 'dimes')
-print(q, 'quarters')
-print(o, 'ones')
-print(f, 'fives')
+print('\n\nWelcome to the vending machine change maker program')
+print('\nChange maker initialized.')
+print('\nStock contains: ')
+nickel = 25
+dime = 25
+quarter = 25
+one = 0
+five = 0
+print('',nickel,'nickels\n',dime,'dimes\n',quarter,'quarters\n',one,'ones\n',five,'fives\n')
+
 while True:
-    user_input = input('Enter the purchase price:\n ')
-    if user_input == 'q':
-        break
-    user_input = float(user_input)
-    if user_input < 0.05:
+    try:
+        user_input = input("Enter the purchase price (xx.xx) or 'q' to quit:\n ")
+        if user_input == 'q': break
+        print(user_input)
+    except:
         print('Invalid Input')
-    print(user_input)                
