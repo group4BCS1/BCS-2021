@@ -17,14 +17,26 @@ while True:
         if user_input > 0 and ((user_input * 100)%5==0):
             print('\nDeposit Menu\n: ')
             print("'n' - Deposit a nickel\n'd' - Deposit a dime\n'q' - Deposit a quarter\n'o' - Deposit a one dollar bill\n'f' - Deposit a five dollar bill\n'c' - Cancel the purchase\n")
+            deposit = 0
             a = user_input // 1
             b = user_input % 1
-            if a == 0:
-                payment_due=print(f"Payment due:{b*100:.0f} cents")
-            else:
-                payment_due=print(f"Payment due:{a:.0f} dollars and {b*100:.0f} cents")
+            if deposit < user_input and a != 0:
+                 payment_due = print(f"Payment due:{a:.0f} dollars and {b*100:.0f} cents")
+            elif deposit > user_input and a == 0 and b != 0:
+                payment_due = print(f"Payment due:{b*100:.0f} cents")
+            while deposit < user_input:
+                user_input2 = input('\nEnter your Deposit:\n')
+                if user_input2 == 'c':
+                    print('No refund')
+                elif user_input > 0:
+                    print('Have your refund:\n ')
+                    remaining_q = int(deposit // 0.25)
+                    deposit = deposit % 0.25
+                    remaining_d = int(deposit // 0.1)
+                    deposit = 
+                    
+                    break
         else:
             print('Invalid input')
-        print(user_input)
     except:
         print('Invalid Input')
