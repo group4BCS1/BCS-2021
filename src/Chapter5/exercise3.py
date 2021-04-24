@@ -35,15 +35,15 @@ while True:
                 user_input2 = input('\nEnter your Deposit:\n')
                 if user_input2 == 'c':
                     print('No refund')
-                elif user_input > 0:
-                    print('Have your refund:\n ')
-                    remaining_q = int(deposit // 0.25)
-                    deposit = deposit % 0.25
-                    remaining_d = int(deposit // 0.1)
-                    deposit = deposit % 0.1 
-                    remaining_n = int(deposit // 0.05)
+                    if user_input > 0:
+                        print('Have your refund:\n ')
+                        remaining_q = int(deposit // 0.25)
+                        deposit = deposit % 0.25
+                        remaining_d = int(deposit // 0.1)
+                        deposit = deposit % 0.1 
+                        remaining_n = int(deposit // 0.05)
                     
-                    if (remianing_q != 0) and (remaining_d == 0) and (remaining_n == 0):
+                    elif (remianing_q != 0) and (remaining_d == 0) and (remaining_n == 0):
                         print(f"{remaining_q} quarters")
                         q = q - remaining_q
                     elif (remaining_q != 0) and (remaining_d != 0) and (remaining_n == 0):
@@ -68,9 +68,7 @@ while True:
                         print(f"{remaining_q} quarters\n{remaining_d} dimes\n{remaining_n} nickels")
                         q = q - remaining_q
                         d = d - remaining_d
-                        n = n - remaining_n
-                    
-                    
+                        n = n - remaining_n 
                     break
                 elif user_input2 == 'q':
                     due_change = deposit - 0.25
