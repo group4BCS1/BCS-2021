@@ -47,6 +47,21 @@ while True:
                         print(f"{remaining_q} quarters\n{remaining_n} nickels")
                         q = q - remaining_q
                         n = n - remaining_n
+                    elif (remaining_q == 0) and (remaining_d != 0) and (remaining_n == 0):
+                        print(f"{remaining_d} dimes")
+                        d = d - remaining_d
+                    elif (remaining_q == 0) and (remaining_d != 0) and (remaining_n != 0):
+                        print(f"{remaining_d} dimes\n{remaining_n} nickels")
+                        d = d - remaining_d
+                        n = n - remaining_n
+                    elif (remaining_q == 0) and (remaining_d == 0) and (remaining_n != 0):
+                        print(f"{remaining_n} nickels")
+                        n = n - remaining_n
+                    elif (remaining_q != 0) and (remaining_d != 0) and (remaining_n != 0):
+                        print(f"{remaining_q} quarters\n{remaining_d} dimes\n{remaining_n} nickels")
+                        q = q - remaining_q
+                        d = d - remaining_d
+                        n = n - remaining_n
                     
                     
                     break
