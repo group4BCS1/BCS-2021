@@ -36,6 +36,19 @@ while True:
                     deposit = deposit % 0.1 
                     remaining_n = int(deposit // 0.05)
                     
+                    if (remianing_q != 0) and (remaining_d == 0) and (remaining_n == 0):
+                        print(f"{remaining_q} quarters")
+                        q = q - remaining_q
+                    elif (remaining_q != 0) and (remaining_d != 0) and (remaining_n == 0):
+                        print(f"{remaining_q} quarters\n{remaining_d} dimes")
+                        q = q - remaining_q
+                        d =  - remaining_d
+                    elif (remianing_q != 0) and (remaining_d == 0) an (remaining_n != 0):
+                        print(f"{remaining_q} quarters\n{remaining_n} nickels")
+                        q = q - remaining_q
+                        n = n - remaining_n
+                    
+                    
                     break
         else:
             print('Invalid input')
