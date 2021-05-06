@@ -1,10 +1,18 @@
+def menu():
+    print('\nDeposit Menu:\n ')
+    print("'n' - Deposit a nickel\n'd' - Deposit a dime\n'q' - Deposit a quarter\n'o' - Deposit a one dollar bill\n'f' - Deposit a five dollar bill\n'c' - Cancel the purchase\n")
+
+
+
+
 def change():
     a = user_input // 1
     b = user_input % 1
-    if deposit < user_input and a != 0:
-        payment_due = print(f"Payment Due: {a: .0f} dollars and {b * 100: .0f} cents")
-    elif deposit > user_input and a == 0 and b != 0:
-        payment_due = print(f"Payment due:{b*100:.0f} cents")
+    if a == 0:
+        payment_due=print(f"Payment due:{b*100:.0f} cents")
+    else:
+        payment_due=print(f"Payment due:{a:.0f} dollars and {b*100:.0f} cents")
+        
 
 
 
@@ -13,12 +21,12 @@ def change():
 print('\n\nWelcome to the vending machine change maker program')
 print('\nChange maker initialized.')
 print('\nStock contains: ')
-nickel = 25
-dime = 25
-quarter = 25
-one = 0
-five = 0
-print('',nickel,'nickels\n',dime,'dimes\n',quarter,'quarters\n',one,'ones\n',five,'fives\n')
+n = 25
+d = 25
+q = 25
+o = 0
+f = 0
+print('',n,'nickels\n',d,'dimes\n',q,'quarters\n',o,'ones\n',f,'fives\n')
 
 while True:
     try:
@@ -27,11 +35,10 @@ while True:
         user_input = float(user_input)
         user_input = ((user_input * 100)%5==0)
         if user_input > 0 and ((user_input * 100)%5==0):
-            print('\nDeposit Menu\n: ')
-            print("'n' - Deposit a nickel\n'd' - Deposit a dime\n'q' - Deposit a quarter\n'o' - Deposit a one dollar bill\n'f' - Deposit a five dollar bill\n'c' - Cancel the purchase\n")
-            deposit = 0
+            menu()
+            deposit = 0.00
             change()    
-            while deposit < user_input:
+            while user_input > deposit:
                 user_input2 = input('\nEnter your Deposit:\n')
                 if user_input2 == 'c':
                     print('No refund')
@@ -104,8 +111,8 @@ while True:
                     print('Invalid Input', dep)
                     change()
                     continue
-                
-                    
+                print(f"Stock contains: \n {n} nickles\n {d} dimes\n {q} quaters\n {o} ones\n {f} fives ")
+                continue    
                     
         else:
             print('Invalid input')
